@@ -14,7 +14,7 @@ int main() {
         ios_base::sync_with_stdio(0);
         cin.tie(0);
         cout<<fixed<<setprecision(9);
-        int n;
+        lli n;
         cin>>n;
         double ans = 0.6321205588;
         if(n >= 12) {
