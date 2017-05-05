@@ -4,12 +4,21 @@
 Upsolving stats
 
 A:
+
 B:
+
 C: Accepted
+
 D:
+
 E:
+
 F:
+
 G: Accepted
+
 H:
+
 I:
+
 J: Accepted
