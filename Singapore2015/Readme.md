@@ -1,6 +1,6 @@
 2015 ACM ICPC Singapore Regional
 
-Upsolving stats : 1 / 11
+Upsolving stats : 6 / 11
 
 A: Accepted
 
