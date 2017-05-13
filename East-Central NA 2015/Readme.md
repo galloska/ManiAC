@@ -1,10 +1,10 @@
 East-Central NA 2015
 
-Upsolving stats : 5 / 9
+Upsolving stats : 6 / 9
 
 A:
 
-B:
+B: Accepted
 
 C:
 
