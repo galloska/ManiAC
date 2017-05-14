@@ -121,7 +121,6 @@ int main() {
     int ans = n + m - acc;
     int HOR = hor.size() + 7;
     int VER = ver.size() + 7;
-    int KK = 0;
     for (int i = 1; i < HOR; ++i) {
         for (int j = 1; j < VER; ++j) {
             for (int k = i; k < HOR; ++k) {
@@ -136,13 +135,11 @@ int main() {
                     int mete = black_Area(1, 105, 105, 1) - black_Area(t, r, b, l);
                     
                     ans = min(ans, saca + mete);
-                    KK++;
                 }
             }
         }
     }
-    
-    assert(KK <= 100*100*100*100);
+   
 
     cout << ans + acc << endl;
 	return 0;
