@@ -9,16 +9,18 @@
 #define pb push_back
 using namespace std;
 
-double const ERROR = 1e-6;
+double const ERROR = 1e-9;
 
-int n;
-double t;
+int n, t;
 vector< pii > data;
 
 double go(double m) {
     double acc  = 0.0;
-    forn(i, n)
+    forn(i, n) {
+        if (data[i].fi + m < 0)
+            acc = 1e10;
         acc += data[i].se / (data[i].fi + m);
+    }
 
     return acc;
 }
@@ -41,14 +43,23 @@ int main() {
     cin.tie(0);
 
     cin >> n >> t;
-
     data = vector< pii >(n);
     
     forn(i, n)
         cin >> data[i].se >> data[i].fi;
 
-    sort(data.begin(), data.end());
+    bool flag = false;
+    double ans = 0;
 
-    cout << fixed << setprecision(9) << bin(-data[0].fi, 1e10) << endl;
+    forn(i, n) {
+        if (flag) break;
+        ans = bin(-data[i].fi, 1e10);
+        if (fabs(go(ans) - t) < ERROR)
+            flag = true;
+    }
+
+    cout << fixed << setprecision(9) << ans << endl;
+
     return 0;
 }
+
